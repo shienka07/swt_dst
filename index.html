@@ -64,8 +64,31 @@
         background-color: #678569;
         border-color: #678569;
       }
+      .toast-header {
+        background-color:#fffdec;
+      }
       .toast {
-        background-color: #ffcfcf;
+        background-color: #ffe2e2;
+      }
+      .modal-header {
+        background-color:#ffe2e2;
+      }
+      .modal-body {
+        background-color: #fffdec;
+      }
+      .modal-footer {
+        background-color:#ffe2e2;
+      }
+      #home-btn {
+        font-size: 50px;
+      }
+      .btn-secondary {
+        background-color: #86a788;
+        border-color: #86a788;
+      }
+      .btn-secondary:hover {
+        background-color: #678569;
+        border-color: #678569;
       }
     </style>
   </head>
@@ -73,7 +96,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Sweet Portfolio</a>
+        <a id="home-btn" class="navbar-brand" href="#"> Sweet Recipes 💕 </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -91,7 +114,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#recipes">Recipes</a>
+              <a class="nav-link" href="#recipes">레시피</a>
             </li>
             <li class="nav-item">
               <a
@@ -99,7 +122,7 @@
                 href="#"
                 data-bs-toggle="modal"
                 data-bs-target="#contactModal"
-                >Contact</a
+                >문의하기</a
               >
             </li>
           </ul>
@@ -111,36 +134,24 @@
       <div id="dessertCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img
-              src="https://via.placeholder.com/800x400/FFCFCF/000000?text=Cake"
-              class="d-block w-100"
-              alt="Cake"
-            />
+            <img src="./cake.jpg" class="d-block w-100" alt="Cake" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Delicious Cakes</h5>
-              <p>Enjoy our variety of cake recipes.</p>
+              <h5>부드러운 케이크</h5>
+              <p>여러분을 행복으로 이끌어줄 케이크 레시피를 즐겨보세요</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img
-              src="https://via.placeholder.com/800x400/FFE2E2/000000?text=Cookies"
-              class="d-block w-100"
-              alt="Cookies"
-            />
+            <img src="./tart.jpg" class="d-block w-100" alt="Cookies" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Sweet Cookies</h5>
-              <p>Explore our cookie recipes for a sweet treat.</p>
+              <h5>달콤한 쿠키</h5>
+              <p>달콤한 간식으로 완벽한 쿠키 레시피를 탐험하세요</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img
-              src="https://via.placeholder.com/800x400/FFFDEC/000000?text=Tarts"
-              class="d-block w-100"
-              alt="Tarts"
-            />
+            <img src="./cookie.jpg" class="d-block w-100" alt="Tarts" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Exquisite Tarts</h5>
-              <p>Discover our tart recipes for any occasion.</p>
+              <h5>정교한 타르트</h5>
+              <p>어느 순간에도 어울리는 타르트 레시피를 만나보세요</p>
             </div>
           </div>
         </div>
@@ -151,7 +162,7 @@
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">이전</span>
         </button>
         <button
           class="carousel-control-next"
@@ -160,25 +171,21 @@
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">다음</span>
         </button>
       </div>
     </header>
 
     <main class="container mt-5" id="recipes">
-      <h2 class="mb-4">Featured Recipes</h2>
+      <h2 class="mb-4">추천 레시피</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card recipe-card h-100">
-            <img
-              src="https://via.placeholder.com/400x300/FFCFCF/000000?text=Recipe+1"
-              class="card-img-top"
-              alt="Recipe 1"
-            />
+            <img src="./cc_ck.jpg" class="card-img-top" alt="Recipe 1" />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Chocolate Cake</h5>
+              <h5 class="card-title">초콜릿 케이크</h5>
               <p class="card-text">
-                Classic chocolate cake recipe for any celebration.
+                어떤 축하 자리에도 어울리는 클래식 초콜릿 케이크 레시피
               </p>
               <button
                 type="button"
@@ -186,22 +193,18 @@
                 data-bs-toggle="modal"
                 data-bs-target="#recipeModal1"
               >
-                View Recipe
+                레시피 보기
               </button>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card recipe-card h-100">
-            <img
-              src="https://via.placeholder.com/400x300/FFE2E2/000000?text=Recipe+2"
-              class="card-img-top"
-              alt="Recipe 2"
-            />
+            <img src="./sb_tr.jpg" class="card-img-top" alt="Recipe 2" />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Strawberry Tart</h5>
+              <h5 class="card-title">딸기 타르트</h5>
               <p class="card-text">
-                Fresh strawberry tart with a delicate crust.
+                신선한 딸기로 만든 섬세한 크러스트의 타르트
               </p>
               <button
                 type="button"
@@ -209,22 +212,18 @@
                 data-bs-toggle="modal"
                 data-bs-target="#recipeModal2"
               >
-                View Recipe
+                레시피 보기
               </button>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card recipe-card h-100">
-            <img
-              src="https://via.placeholder.com/400x300/FFFDEC/000000?text=Recipe+3"
-              class="card-img-top"
-              alt="Recipe 3"
-            />
+            <img src="./v_ck.jpg" class="card-img-top" alt="Recipe 3" />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Vanilla Cookies</h5>
+              <h5 class="card-title">바닐라 쿠키</h5>
               <p class="card-text">
-                Simple and delicious vanilla cookies, perfect with tea.
+                차와 완벽하게 어울리는 간단하고 맛있는 바닐라 쿠키
               </p>
               <button
                 type="button"
@@ -232,7 +231,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#recipeModal3"
               >
-                View Recipe
+                레시피 보기
               </button>
             </div>
           </div>
@@ -251,7 +250,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+            <h5 class="modal-title" id="contactModalLabel">문의하기</h5>
             <button
               type="button"
               class="btn-close"
@@ -260,8 +259,8 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>Email: desserts@example.com</p>
-            <p>Phone: 123-456-7890</p>
+            <p>이메일: abcdefg@hijk.com</p>
+            <p>연락처: 000-0000-0000</p>
           </div>
           <div class="modal-footer">
             <button
@@ -269,7 +268,7 @@
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              Close
+              닫기
             </button>
           </div>
         </div>
@@ -288,7 +287,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="recipeModalLabel1">
-              Chocolate Cake Recipe
+              초콜릿 케이크 레시피
             </h5>
             <button
               type="button"
@@ -299,46 +298,47 @@
           </div>
           <div class="modal-body">
             <!-- Recipe content here -->
-            <h3>Ingredients:</h3>
+            <h3>재료</h3>
             <ul>
-              <li>2 cups all-purpose flour</li>
-              <li>2 cups sugar</li>
-              <li>¾ cup unsweetened cocoa powder</li>
-              <li>1 ½ teaspoons baking powder</li>
-              <li>1 ½ teaspoons baking soda</li>
-              <li>1 teaspoon salt</li>
-              <li>1 cup milk</li>
-              <li>½ cup vegetable oil</li>
-              <li>2 large eggs</li>
-              <li>2 teaspoons vanilla extract</li>
-              <li>1 cup boiling water</li>
+              <li>밀가루 2컵</li>
+              <li>설탕 2컵</li>
+              <li>무가당 코코아 가루 ¾컵</li>
+              <li>베이킹파우더 1½티스푼</li>
+              <li>베이킹소다 1½티스푼</li>
+              <li>소금 1티스푼</li>
+              <li>우유 1컵</li>
+              <li>식용유 ½컵</li>
+              <li>큰 달걀 2개</li>
+              <li>바닐라 추출액 2티스푼</li>
+              <li>초콜릿 50g</li>
+              <li>끓는 물 1컵</li>
             </ul>
-            <h3>Instructions:</h3>
+            <h3>조리 방법</h3>
             <ol>
               <li>
-                Preheat oven to 350 degrees F (175 degrees C). Grease and flour
-                two 9 inch round pans.
+                오븐을 화씨 350도(섭씨 175도)로 예열하세요. </li>
+                <li>9인치 원형 팬 2개에
+                  기름칠을 하고 밀가루를 뿌립니다.</li>
+              <li>
+                큰 볼에 밀가루, 설탕, 코코아 가루, 베이킹파우더, 베이킹소다, 소금을 넣고 섞습니다.
               </li>
               <li>
-                In a large bowl, whisk together flour, sugar, cocoa, baking
-                powder, baking soda, and salt.
+                우유, 식용유, 달걀, 바닐라를 넣고 중속에서 2분간 섞습니다.
               </li>
               <li>
-                Add milk, oil, eggs, and vanilla. Beat on medium speed for 2
-                minutes.
+                끓는 물을 넣고 저어줍니다(반죽이 묽어집니다). </li>
+                <li>준비된 팬에 반죽을
+                  균일하게 나눠 부어줍니다.</li>
               </li>
               <li>
-                Stir in boiling water (batter will be thin). Pour batter evenly
-                into prepared pans.
+                30-35분간 굽거나, 이쑤시개로 찔렀을 때 깨끗하게 나오면
+                완성입니다.
               </li>
-              <li>
-                Bake for 30-35 minutes, or until a toothpick inserted into the
-                center comes out clean.
-              </li>
-              <li>
-                Cool in pans for 10 minutes before inverting onto a wire rack to
-                cool completely.
-              </li>
+              <li>팬에서 10분간 식힌 뒤 와이어 랙에 뒤집어 완전히 식힙니다.</li>
+              <li>초콜릿을 중탕합니다.</li>
+              <li>완전히 중탕된 초콜릿을 케이크 위에 부어줍니다.</li>
+              <li>냉장고에 1시간 넣어줍니다.</li>
+              <li>완성🍫</li>
             </ol>
           </div>
           <div class="modal-footer">
@@ -365,7 +365,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="recipeModalLabel2">
-              Strawberry Tart Recipe
+              딸기 타르트 레시피
             </h5>
             <button
               type="button"
@@ -376,42 +376,51 @@
           </div>
           <div class="modal-body">
             <!-- Recipe content here -->
-            <h3>Ingredients:</h3>
+            <h3>재료</h3>
             <ul>
-              <li>1 ½ cups all-purpose flour</li>
-              <li>½ teaspoon salt</li>
-              <li>½ cup (1 stick) unsalted butter, chilled and cubed</li>
-              <li>¼ cup ice water</li>
-              <li>1 pound fresh strawberries, hulled and halved</li>
-              <li>½ cup sugar</li>
-              <li>¼ cup strawberry jam</li>
+              <li>밀가루 1½컵</li>
+              <li>소금 ½티스푼</li>
+              <li>무염 버터 ½컵 (1스틱), 차갑게 하고 깍둑 썰기</li>
+              <li>얼음물 ¼컵</li>
+              <li>신선한 딸기 1파운드, 꼭지를 제거하고 반으로 자르기</li>
+              <li>설탕 ½컵</li>
+              <li>딸기 잼 ¼컵</li>
             </ul>
             <h3>Instructions:</h3>
             <ol>
               <li>
-                In a medium bowl, whisk together flour and salt. Cut in butter
-                using a pastry blender or your fingers until mixture resembles
-                coarse crumbs.
+                중간 크기의 볼에 밀가루와 소금을 넣고 섞습니다. 패스트리
+                블렌더나 손끝을 이용해 버터를 넣고 섞어 굵은 부스러기 같은
+                질감이 되도록 합니다.
               </li>
               <li>
-                Gradually add ice water, mixing until dough just comes together.
-                Form dough into a disk, wrap in plastic wrap, and chill for at
-                least 30 minutes.
+                얼음물을 조금씩 넣으면서 반죽이 겨우 뭉칠 정도로 섞습니다.
               </li>
               <li>
-                Preheat oven to 375 degrees F (190 degrees C). On a lightly
-                floured surface, roll out dough to a 12-inch circle. Transfer to
-                a tart pan with a removable bottom.
+                반죽을 디스크 모양으로 만들고 랩으로 싸서 냉장고에서 최소 30분
+                동안 식힙니다.
               </li>
-              <li>Arrange strawberries in tart shell. Sprinkle with sugar.</li>
+
+              <li>오븐을 화씨 375도(섭씨 190도)로 예열합니다.</li>
               <li>
-                Bake for 30-40 minutes, or until crust is golden brown and
-                strawberries are tender.
+                가볍게 밀가루를 뿌린 표면에서 반죽을 12인치 원형으로 밀어냅니다.
               </li>
               <li>
-                Heat strawberry jam in a small saucepan until melted. Brush over
-                warm tart. Let cool completely before serving.
+                타르트 팬(바닥이 분리 가능한 팬)을 준비하고 반죽을 팬에 옮겨
+                깔아줍니다.
               </li>
+              <li>
+                타르트 팬 안에 딸기를 고르게 배열합니다. 딸기 위에 설탕을
+                뿌립니다.
+              </li>
+              <li>
+                30-40분 동안 굽거나, 크러스트가 황금빛이 되고 딸기가 부드러워질
+                때까지 굽습니다.
+              </li>
+              <li>작은 소스팬에서 딸기 잼을 녹을 때까지 가열합니다.</li>
+              <li>녹인 잼을 따뜻한 타르트 위에 발라줍니다.</li>
+              <li>타르트를 완전히 식힌 뒤 서빙합니다.</li>
+              <li>완성!! 선호에 따라 아이스트림과 함께 드셔보세요🍨</li>
             </ol>
           </div>
           <div class="modal-footer">
@@ -420,7 +429,7 @@
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              Close
+              닫기
             </button>
           </div>
         </div>
@@ -438,7 +447,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="recipeModalLabel3">
-              Vanilla Cookies Recipe
+              바닐라 쿠키 레시피
             </h5>
             <button
               type="button"
@@ -449,37 +458,45 @@
           </div>
           <div class="modal-body">
             <!-- Recipe content here -->
-            <h3>Ingredients:</h3>
+            <h3>재료</h3>
             <ul>
-              <li>1 cup (2 sticks) unsalted butter, softened</li>
-              <li>1 cup granulated sugar</li>
-              <li>1 large egg</li>
-              <li>1 teaspoon vanilla extract</li>
-              <li>2 cups all-purpose flour</li>
-              <li>½ teaspoon baking powder</li>
-              <li>¼ teaspoon salt</li>
+              <li>무염 버터 1컵 (2스틱), 부드럽게 하기</li>
+              <li>설탕 1컵</li>
+              <li>큰 달걀 1개</li>
+              <li>바닐라 추출액 1티스푼</li>
+              <li>밀가루 2컵</li>
+              <li>베이킹파우더 ½티스푼</li>
+              <li>소금 ¼티스푼</li>
             </ul>
-            <h3>Instructions:</h3>
+            <h3>조리 방법</h3>
             <ol>
+              <li>오븐을 화씨 375도(섭씨 190도)로 예열합니다.</li>
+              <li>베이킹 시트에 유산지를 깔아 준비합니다.</li>
+
               <li>
-                Preheat oven to 375 degrees F (190 degrees C). Line baking
-                sheets with parchment paper.
+                큰 볼에 버터와 설탕을 넣고 가볍고 부드러운 질감이 될 때까지
+                섞습니다.
+              </li>
+              <li>달걀과 바닐라 추출액을 넣고 잘 섞습니다.</li>
+              <li>
+                별도의 볼에 밀가루, 베이킹파우더, 소금을 넣고 고루 섞습니다.
               </li>
               <li>
-                In a large bowl, cream together butter and sugar until light and
-                fluffy. Beat in egg and vanilla extract.
+                마른 재료를 젖은 재료에 조금씩 넣으며 섞어 반죽을
+                만듭니다(과도하게 섞지 않도록 주의하세요).
               </li>
               <li>
-                In a separate bowl, whisk together flour, baking powder, and
-                salt. Gradually add to wet ingredients, mixing until just
-                combined.
+                준비된 베이킹 시트 위에 반죽을 둥글게 한 스푼씩 떠서 올립니다.
               </li>
-              <li>Drop by rounded tablespoons onto prepared baking sheets.</li>
               <li>
-                Bake for 8-10 minutes, or until edges are lightly golden. Let
-                cool on baking sheets for a few minutes before transferring to a
-                wire rack to cool completely.
+                8-10분 동안 굽거나, 가장자리가 살짝 황금빛이 될 때까지
+                구워줍니다.
               </li>
+              <li>
+                베이킹 시트에서 몇 분간 식힌 후 와이어 랙으로 옮겨 완전히
+                식힙니다.
+              </li>
+              <li>완성! 따뜻하거나 차갑게 즐기세요! 🥛🍪</li>
             </ol>
           </div>
           <div class="modal-footer">
@@ -505,7 +522,7 @@
         aria-atomic="true"
       >
         <div class="toast-header">
-          <strong class="me-auto">Welcome!</strong>
+          <strong class="me-auto">환영합니다!</strong>
           <button
             type="button"
             class="btn-close"
@@ -513,7 +530,9 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="toast-body">Enjoy exploring our dessert recipes!</div>
+        <div class="toast-body">
+          행복으로 이끌어줄 디저트 레시피를 탐험하며 즐겨보세요! 🍰🍪🍓
+        </div>
       </div>
     </div>
 
